@@ -1,37 +1,74 @@
 import React, { useState } from 'react';
 
 const Slider = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const images = [
-        'src/assets/img/revimages/homepage05-slide1.jpg',
-        'src/assets/img/revimages/homepage05-slide2.jpg',
-        'src/assets/img/revimages/homepage05-slide3.jpg',
-    ];
 
-    const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    };
-
-    const prevSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-    };
 
     return (
-        <div className="slider-container" style={{ height: '100vh', position: 'relative', overflow: 'hidden' }}>
-            <div className="slider" style={{ display: 'flex', transition: 'transform 0.5s', transform: `translateX(-${currentIndex * 100}%)` }}>
-                {images.map((image, index) => (
-                    <div key={index} style={{ width: '100%', flex: '0 0 100%', boxSizing: 'border-box' }}>
-                        <img src={image} alt={`Slide ${index + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        <>
+            <div id="carouselExampleDark" className="carousel carousel-dark slide">
+                <div className="carousel-indicators">
+                    <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to={0}
+                        className="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                    />
+                    <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to={1}
+                        aria-label="Slide 2"
+                    />
+                    <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to={2}
+                        aria-label="Slide 3"
+                    />
+                </div>
+                <div className="carousel-inner">
+                    <div className="carousel-item active" data-bs-interval={10000}>
+                        <img src="src/assets/img/revimages/homepage05-slide1.jpg" className="d-block w-100" alt="..." />
+                        <div style={{ bottom: "14.25rem" }} className="carousel-caption d-none d-md-block">
+                            <h5>The Marble Consept</h5>
+                        </div>
                     </div>
-                ))}
+                    <div className="carousel-item" data-bs-interval={2000}>
+                        <img src="src/assets/img/revimages/homepage05-slide2.jpg" className="d-block w-100" alt="..." />
+                        <div style={{ bottom: "14.25rem" }} className="carousel-caption d-none d-md-block">
+                            <h5>New Interior Concept</h5>
+                        </div>
+                    </div>
+                    <div className="carousel-item">
+                        <img src="src/assets/img/revimages/homepage05-slide3.jpg" className="d-block w-100" alt="..." />
+                        <div style={{ bottom: "14.25rem" }} className="carousel-caption d-none d-md-block">
+                            <h5>The Brighten Up</h5>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    className="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev"
+                >
+                    <span className="carousel-control-prev-icon" aria-hidden="true" />
+                    <span className="visually-hidden">Previous</span>
+                </button>
+                <button
+                    className="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next"
+                >
+                    <span className="carousel-control-next-icon" aria-hidden="true" />
+                    <span className="visually-hidden">Next</span>
+                </button>
             </div>
-            <button onClick={prevSlide} style={{ position: 'absolute', top: '50%', left: '10px', transform: 'translateY(-50%)', zIndex: '1' }}>
-                Prev
-            </button>
-            <button onClick={nextSlide} style={{ position: 'absolute', top: '50%', right: '10px', transform: 'translateY(-50%)', zIndex: '1' }}>
-                Next
-            </button>
-        </div>
+
+        </>
     );
 };
 
