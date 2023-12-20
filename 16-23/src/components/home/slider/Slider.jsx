@@ -31,20 +31,20 @@ const Slider = () => {
                 <div className="carousel-inner">
                     <div className="carousel-item active" data-bs-interval={10000}>
                         <img src="src/assets/img/revimages/homepage05-slide1.jpg" className="d-block w-100" alt="..." />
-                        <div style={{ bottom: "14.25rem" }} className="carousel-caption d-none d-md-block">
-                            <h5>The Marble Consept</h5>
+                        <div style={{ bottom: "22.25rem" }} className="carousel-caption d-none d-md-block">
+                            <h1>The Marble Consept</h1>
                         </div>
                     </div>
                     <div className="carousel-item" data-bs-interval={2000}>
                         <img src="src/assets/img/revimages/homepage05-slide2.jpg" className="d-block w-100" alt="..." />
-                        <div style={{ bottom: "14.25rem" }} className="carousel-caption d-none d-md-block">
-                            <h5>New Interior Concept</h5>
+                        <div style={{ bottom: "22.25rem" }} className="carousel-caption d-none d-md-block">
+                            <h1>New Interior Concept</h1>
                         </div>
                     </div>
                     <div className="carousel-item">
                         <img src="src/assets/img/revimages/homepage05-slide3.jpg" className="d-block w-100" alt="..." />
-                        <div style={{ bottom: "14.25rem" }} className="carousel-caption d-none d-md-block">
-                            <h5>The Brighten Up</h5>
+                        <div style={{ bottom: "22.25rem"}} className="carousel-caption d-none d-md-block">
+                            <h1>The Brighten Up</h1>
                         </div>
                     </div>
                 </div>
