@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { addToCart } from '../../store/slices/cartSlice';
 import { useDispatch } from 'react-redux';
 
@@ -26,7 +26,25 @@ function ProductDetail() {
     }
     return (
         <div className="page-content-wrapper">
-            {/*=======  single product slider details area  =======*/}
+            <div className="breadcrumb-area section-space--breadcrumb">
+                <div className="container">
+                    <div style={{ paddingTop: "120px" }} className="row">
+                        <div className="col-lg-6 offset-lg-3">
+                            {/*=======  breadcrumb wrapper  =======*/}
+                            <div className="breadcrumb-wrapper">
+                                <h2 className="page-title">Shop</h2>
+                                <ul className="breadcrumb-list">
+                                    <li>
+                                        <Link to={"/"}>Home</Link>
+                                    </li>
+                                    <li className="active">Shop product</li>
+                                </ul>
+                            </div>
+                            {/*=======  End of breadcrumb wrapper  =======*/}
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             {
                 product &&

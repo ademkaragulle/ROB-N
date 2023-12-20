@@ -176,162 +176,159 @@ function Blog() {
 
     return (
         <div>
-            <>
-                {/*====================  breadcrumb area ====================*/}
-                <div className="breadcrumb-area section-space--breadcrumb">
+            {/*====================  breadcrumb area ====================*/}
+            <div className="breadcrumb-area section-space--breadcrumb ">
+                <div className="container">
+                    <div className="row">
+                        <div style={{ paddingTop: "100px" }} className="col-lg-6 offset-lg-3">
+                            {/*=======  breadcrumb wrapper  =======*/}
+                            <div className="breadcrumb-wrapper">
+                                <h2 className="page-title">Blog</h2>
+                                <ul className="breadcrumb-list">
+                                    <li>
+                                        <Link to={"/"}>Home</Link>
+                                    </li>
+                                    <li className="active">Blog</li>
+                                </ul>
+                            </div>
+                            {/*=======  End of breadcrumb wrapper  =======*/}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/*====================  End of breadcrumb area  ====================*/}
+            {/*====================  page content wrapper ====================*/}
+            <div className="page-content-wrapper">
+                {/*=======  blog page area  =======*/}
+                <div className="blog-page-area">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-6 offset-lg-3">
-                                {/*=======  breadcrumb wrapper  =======*/}
-                                <div className="breadcrumb-wrapper">
-                                    <h2 className="page-title">Blog</h2>
-                                    <ul className="breadcrumb-list">
-                                        <li>
-                                            <Link to={"/"}>Home</Link>
-                                        </li>
-                                        <li className="active">Blog</li>
-                                    </ul>
-                                </div>
-                                {/*=======  End of breadcrumb wrapper  =======*/}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/*====================  End of breadcrumb area  ====================*/}
-                {/*====================  page content wrapper ====================*/}
-                <div className="page-content-wrapper">
-                    {/*=======  blog page area  =======*/}
-                    <div className="blog-page-area">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-3 order-2">
-                                    {/*=======  blog sidebar  =======*/}
-                                    <div className="blog-sidebar-wrapper">
-                                        {/*=======  single sidebar widget  =======*/}
-                                        <div className="single-sidebar-widget single-sidebar-widget--extra-space">
-                                            <h2 className="single-sidebar-widget__title single-sidebar-widget__title--extra-space">
-                                                Search
-                                            </h2>
-                                            <div className="sidebar-search">
-                                                <form action="#">
-                                                    <input type="search" placeholder="Search..." />
-                                                    <button type="submit">
-                                                        <i className="fa fa-search" />
-                                                    </button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        {/*=======  End of single sidebar widget  =======*/}
-                                        {/*=======  single sidebar widget  =======*/}
-                                        <div className="single-sidebar-widget">
-                                            <h2 className="single-sidebar-widget__title">Recent Posts</h2>
-                                            <ul className="single-sidebar-widget__dropdown single-sidebar-widget__dropdown--extra-height">
-                                                {blogs.map((blog) => (
-                                                    <li>
-                                                        <Link to={`/blog-detail/${blog.slug}`}>
-                                                            {blog.title}
-                                                        </Link>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                        {/*=======  End of single sidebar widget  =======*/}
-                                    </div>
-                                    {/*=======  End of blog sidebar  =======*/}
-                                </div>
-                                <div className="col-lg-9 order-1">
-                                    {/*=======  blog post wrapper  =======*/}
-                                    <div className="blog-post-wrapper">
-                                        <div className="row">
-
-
-                                            {
-                                                blogs.map((blog, index) => (
-                                                    <div key={index} className="col-md-6">
-                                                        {/*=======  single post  =======*/}
-                                                        <div className="single-blog-post">
-                                                            <div className="single-blog-post__image">
-                                                                {blog.img &&
-                                                                    <Link to={`/blog-detail/${blog.slug}`}>
-                                                                        <img src={blog.img} className="img-fluid" alt="" />
-                                                                    </Link>
-                                                                }
-                                                            </div>
-                                                            <div className="single-blog-post__content">
-                                                                <h3 className="post-title">
-                                                                    <Link to={`/blog-detail/${blog.slug}`}>
-                                                                        {
-                                                                            blog.title
-                                                                        }
-                                                                    </Link>
-                                                                </h3>
-                                                                <p className="post-meta">
-                                                                    By{" "}
-                                                                    <a href="#" className="post-author">
-                                                                        {blog.author}
-                                                                    </a>{" "}
-                                                                    <span className="separator">|</span>{" "}
-                                                                    <a href="#">January 21, 2023</a>
-                                                                </p>
-                                                                <p className="post-excerpt">
-                                                                    {
-                                                                        blog.shortText
-                                                                    }
-                                                                </p>
-                                                                <Link
-                                                                    to={`/blog-detail/${blog.slug}`}
-                                                                    className="blog-readmore-link"
-                                                                >
-                                                                    Read more <i className="fa fa-caret-right" />
-                                                                </Link>
-                                                            </div>
-                                                        </div>
-                                                        {/*=======  End of single post  =======*/}
-                                                    </div>
-
-                                                ))
-                                            }
-
-
-
-
-
-
+                            <div className="col-lg-3 order-2">
+                                {/*=======  blog sidebar  =======*/}
+                                <div className="blog-sidebar-wrapper">
+                                    {/*=======  single sidebar widget  =======*/}
+                                    <div className="single-sidebar-widget single-sidebar-widget--extra-space">
+                                        <h2 className="single-sidebar-widget__title single-sidebar-widget__title--extra-space">
+                                            Search
+                                        </h2>
+                                        <div className="sidebar-search">
+                                            <form action="#">
+                                                <input type="search" placeholder="Search..." />
+                                                <button type="submit">
+                                                    <i className="fa fa-search" />
+                                                </button>
+                                            </form>
                                         </div>
                                     </div>
-                                    {/*=======  End of blog post wrapper  =======*/}
-                                    {/*=======  pagination wrapper  =======*/}
-                                    <div className="pagination-wrapper">
-                                        <ul>
-                                            <li className="active">
-                                                <a href="#">1</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">2</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">3</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">4</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i className="fa fa-angle-right" />
-                                                </a>
-                                            </li>
+                                    {/*=======  End of single sidebar widget  =======*/}
+                                    {/*=======  single sidebar widget  =======*/}
+                                    <div className="single-sidebar-widget">
+                                        <h2 className="single-sidebar-widget__title">Recent Posts</h2>
+                                        <ul className="single-sidebar-widget__dropdown single-sidebar-widget__dropdown--extra-height">
+                                            {blogs.map((blog) => (
+                                                <li>
+                                                    <Link to={`/blog-detail/${blog.slug}`}>
+                                                        {blog.title}
+                                                    </Link>
+                                                </li>
+                                            ))}
                                         </ul>
                                     </div>
-                                    {/*=======  End of pagination wrapper  =======*/}
+                                    {/*=======  End of single sidebar widget  =======*/}
                                 </div>
+                                {/*=======  End of blog sidebar  =======*/}
+                            </div>
+                            <div className="col-lg-9 order-1">
+                                {/*=======  blog post wrapper  =======*/}
+                                <div className="blog-post-wrapper">
+                                    <div className="row">
+
+
+                                        {
+                                            blogs.map((blog, index) => (
+                                                <div key={index} className="col-md-6">
+                                                    {/*=======  single post  =======*/}
+                                                    <div className="single-blog-post">
+                                                        <div className="single-blog-post__image">
+                                                            {blog.img &&
+                                                                <Link to={`/blog-detail/${blog.slug}`}>
+                                                                    <img src={blog.img} className="img-fluid" alt="" />
+                                                                </Link>
+                                                            }
+                                                        </div>
+                                                        <div className="single-blog-post__content">
+                                                            <h3 className="post-title">
+                                                                <Link to={`/blog-detail/${blog.slug}`}>
+                                                                    {
+                                                                        blog.title
+                                                                    }
+                                                                </Link>
+                                                            </h3>
+                                                            <p className="post-meta">
+                                                                By{" "}
+                                                                <a href="#" className="post-author">
+                                                                    {blog.author}
+                                                                </a>{" "}
+                                                                <span className="separator">|</span>{" "}
+                                                                <a href="#">January 21, 2023</a>
+                                                            </p>
+                                                            <p className="post-excerpt">
+                                                                {
+                                                                    blog.shortText
+                                                                }
+                                                            </p>
+                                                            <Link
+                                                                to={`/blog-detail/${blog.slug}`}
+                                                                className="blog-readmore-link"
+                                                            >
+                                                                Read more <i className="fa fa-caret-right" />
+                                                            </Link>
+                                                        </div>
+                                                    </div>
+                                                    {/*=======  End of single post  =======*/}
+                                                </div>
+
+                                            ))
+                                        }
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                                {/*=======  End of blog post wrapper  =======*/}
+                                {/*=======  pagination wrapper  =======*/}
+                                <div className="pagination-wrapper">
+                                    <ul>
+                                        <li className="active">
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i className="fa fa-angle-right" />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                {/*=======  End of pagination wrapper  =======*/}
                             </div>
                         </div>
                     </div>
-                    {/*=======  End of blog page area  =======*/}
                 </div>
-                {/*====================  End of page content wrapper  ====================*/}
-            </>
-
+                {/*=======  End of blog page area  =======*/}
+            </div>
+            {/*====================  End of page content wrapper  ====================*/}
         </div >
     )
 }

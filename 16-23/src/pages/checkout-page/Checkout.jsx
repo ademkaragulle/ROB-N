@@ -82,7 +82,7 @@ function Checkout() {
             {/*====================  breadcrumb area ====================*/}
             <div className="breadcrumb-area section-space--breadcrumb">
                 <div className="container">
-                    <div className="row">
+                    <div style={{ paddingTop: "100px" }} className="row">
                         <div className="col-lg-6 offset-lg-3">
                             {/*=======  breadcrumb wrapper  =======*/}
                             <div className="breadcrumb-wrapper">

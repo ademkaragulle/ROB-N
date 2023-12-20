@@ -211,7 +211,7 @@ function BlogDetail() {
                 <div className="breadcrumb-area section-space--breadcrumb">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-6 offset-lg-3">
+                            <div style={{ paddingTop: "100px" }} className="col-lg-6 offset-lg-3">
                                 {/*=======  breadcrumb wrapper  =======*/}
                                 <div className="breadcrumb-wrapper">
                                     <h2 className="page-title">Blog Post</h2>

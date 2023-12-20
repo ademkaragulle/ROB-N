@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Slider = () => {
 
@@ -43,7 +43,7 @@ const Slider = () => {
                     </div>
                     <div className="carousel-item">
                         <img src="src/assets/img/revimages/homepage05-slide3.jpg" className="d-block w-100" alt="..." />
-                        <div style={{ bottom: "22.25rem"}} className="carousel-caption d-none d-md-block">
+                        <div style={{ bottom: "22.25rem" }} className="carousel-caption d-none d-md-block">
                             <h1>The Brighten Up</h1>
                         </div>
                     </div>
